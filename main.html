@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<b>개인 정보 및 대출금액</b>
+	<hr>
+	<table>
+		<tr>
+			<th>이름</th>
+			<th>전화번호</th>
+			<th>메일</th>
+			<th>성별</th>
+			<th>금액</th>
+			<th>이자율</th>
+			<th>대출기간</th>
+			<th>월불금액</th>
+			<th>원금 및 이자합계</th>
+			<th>이자금액</th>
+			<th>기타사항</th>
+		</tr>
+		<tr th:each="obj : ${datalist}">
+			<td><th:text="${obj.name}"></td>
+			<td><th:text="${obj.first}"></td>
+			<td><th:text="${obj.second}"></td>
+			<td><th:text="${obj.third}"></td>
+			<td><th:text="${obj.email}"></td>
+			<td><th:text="${obj.principal}"></td>
+			<td><th:text="${obj.interest}"></td>
+			<td><th:text="${obj.years}"></td>
+			<td><th:text="${obj.payment}"></td>
+			<td><th:text="${obj.total}"></td>
+			<td><th:text="${obj.totalinterest}"></td>
+			<td><th:text="${obj.textarea}"></td>
+		</tr>
+	</table>
+</body>
+</html>
